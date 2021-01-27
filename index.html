@@ -16,7 +16,7 @@
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div class="cart-item phone">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -25,17 +25,17 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="btnMinus" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="phoneQuantity" type="text" class="form-control text-center" value="1">
-                           <button id="btnPlus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="updateProductQuantity('phone', -1)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="phoneQuantity" onfocusout="updateProductQuantity('phone', 0)" type="text" class="form-control text-center" value="1">
+                           <button onclick="updateProductQuantity('phone', 1)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="totalPhonePrice"> 1219</span> </h5>
-                        <img id="removePhone" src="images/remove.png" alt="" class="remove-item">
+                        <h5>$ <span id="phoneTotalPrice"> 1219</span> </h5>
+                        <img onclick="removeItem('phone')" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item">
+               <div class="cart-item case">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -43,13 +43,13 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="btnMinusCase" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="caseQuantity" type="text" class="form-control text-center" value="1">
-                           <button id="btnPlusCase" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="updateProductQuantity('case', -1)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="caseQuantity" onfocusout="updateProductQuantity('case', 0)"  type="text" class="form-control text-center" value="1">
+                           <button onclick="updateProductQuantity('case', 1)" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$ <span id="totalCasePrice"> 59</span></h5>
-                        <img id="removeCase" src="images/remove.png" alt="" class="remove-item">
+                        <h5>$ <span id="caseTotalPrice"> 59</span></h5>
+                        <img onclick="removeItem('case')" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
